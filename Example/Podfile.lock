@@ -1,0 +1,16 @@
+PODS:
+  - ImgDimensions (0.1.0)
+
+DEPENDENCIES:
+  - ImgDimensions (from `../`)
+
+EXTERNAL SOURCES:
+  ImgDimensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ImgDimensions: 67b3d9a3a80a05776685afb477710a5d102ba3c0
+
+PODFILE CHECKSUM: 35124bef4710c79b78c05c500eac31a3e658f48b
+
+COCOAPODS: 1.11.3

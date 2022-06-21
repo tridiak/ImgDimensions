@@ -3,9 +3,15 @@ import ImgDimensions
 
 class Tests: XCTestCase {
     
+	private var imgPath : String! = nil
+	
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+		let b = Bundle(for: type(of: self))
+		if let path = b.path(forResource: "garf", ofType: "gif") {
+			imgPath = path
+		}
     }
     
     override func tearDown() {
@@ -15,7 +21,17 @@ class Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        
+		XCTAssertNotNil(imgPath)
+		
+		var isl : ImgSizeList! = ImgSizeList()
+		let res = GetImageSizeC(imgPath, &isl)
+		
+		XCTAssert(res >= 0)
+		XCTAssertEqual(res, Int32(imgTypeGIF.rawValue))
+		XCTAssertEqual(isl.first.w, 600)
+		XCTAssertEqual(isl.first.h, 171)
+		
     }
     
     func testPerformanceExample() {

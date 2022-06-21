@@ -1,0 +1,6 @@
+framework module ImgDimensions {
+  umbrella header "ImgDimensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

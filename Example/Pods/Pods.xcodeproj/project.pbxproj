@@ -17,9 +17,9 @@
 		92B873E228613B950011CD9E /* ImgSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B873DE28613B950011CD9E /* ImgSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92B873E328613B950011CD9E /* ImgSizeStruct.c in Sources */ = {isa = PBXBuildFile; fileRef = 92B873DF28613B950011CD9E /* ImgSizeStruct.c */; };
 		92B873E428613B950011CD9E /* ImgSizeStruct.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B873E028613B950011CD9E /* ImgSizeStruct.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92B873E528613B950011CD9E /* ImgSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92B873E128613B950011CD9E /* ImgSize.hpp */; };
 		92B873E92861412A0011CD9E /* Classes in Sources */ = {isa = PBXBuildFile; fileRef = 92B873E82861412A0011CD9E /* Classes */; };
 		92B873EB286141B80011CD9E /* ImgSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B873EA286141B80011CD9E /* ImgSize.cpp */; };
+		92B873F0286157230011CD9E /* ImgSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92B873EF286157230011CD9E /* ImgSize.hpp */; };
 		97048ED6463F3F2A59A1787623B8FFC6 /* Pods-ImgDimensions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4836E60DD621B1FC21B1766977E4A662 /* Pods-ImgDimensions_Tests-dummy.m */; };
 		977DFA497FE4C5416078A5CDB58DC5A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		CB78DC2A868C747C049BB2AB943997B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -64,9 +64,9 @@
 		92B873DE28613B950011CD9E /* ImgSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImgSize.h; path = ImgDimensions/Classes/ImgSize.h; sourceTree = "<group>"; };
 		92B873DF28613B950011CD9E /* ImgSizeStruct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ImgSizeStruct.c; path = ImgDimensions/Classes/ImgSizeStruct.c; sourceTree = "<group>"; };
 		92B873E028613B950011CD9E /* ImgSizeStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImgSizeStruct.h; path = ImgDimensions/Classes/ImgSizeStruct.h; sourceTree = "<group>"; };
-		92B873E128613B950011CD9E /* ImgSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImgSize.hpp; path = ImgDimensions/Classes/ImgSize.hpp; sourceTree = "<group>"; };
 		92B873E82861412A0011CD9E /* Classes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = Classes; path = ImgDimensions/Classes; sourceTree = "<group>"; };
 		92B873EA286141B80011CD9E /* ImgSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImgSize.cpp; path = ImgDimensions/Classes/ImgSize.cpp; sourceTree = "<group>"; };
+		92B873EF286157230011CD9E /* ImgSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImgSize.hpp; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DB14108F68F9CFED486C9478A481452 /* Pods-ImgDimensions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImgDimensions_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9DC248D988E43C4B5CF50B2E517DC2ED /* Pods-ImgDimensions_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImgDimensions_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -125,10 +125,10 @@
 		2B4A299D3180D421C474CFD43DDDC290 /* ImgDimensions */ = {
 			isa = PBXGroup;
 			children = (
+				92B873F1286158480011CD9E /* Private */,
 				92B873EA286141B80011CD9E /* ImgSize.cpp */,
 				92B873E82861412A0011CD9E /* Classes */,
 				92B873DE28613B950011CD9E /* ImgSize.h */,
-				92B873E128613B950011CD9E /* ImgSize.hpp */,
 				92B873DF28613B950011CD9E /* ImgSizeStruct.c */,
 				92B873E028613B950011CD9E /* ImgSizeStruct.h */,
 				F421A8D9CBAC627233FE5D9EADF5A1E7 /* ImgDimension.swift */,
@@ -199,6 +199,15 @@
 			path = "Target Support Files/Pods-ImgDimensions_Tests";
 			sourceTree = "<group>";
 		};
+		92B873F1286158480011CD9E /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				92B873EF286157230011CD9E /* ImgSize.hpp */,
+			);
+			name = Private;
+			path = ImgDimensions/Private;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -257,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				075A6BFF0E8E9B0E23483DDE013793C0 /* ImgDimensions-umbrella.h in Headers */,
-				92B873E528613B950011CD9E /* ImgSize.hpp in Headers */,
 				92B873E428613B950011CD9E /* ImgSizeStruct.h in Headers */,
 				92B873E228613B950011CD9E /* ImgSize.h in Headers */,
+				92B873F0286157230011CD9E /* ImgSize.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

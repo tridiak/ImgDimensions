@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ImgDimensions'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ImgDimensions.'
+  s.summary          = 'Simple library that retrieves image dimensions without loading entire file'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Simple library that retrieves image dimensions without loading entire file.
+  Support for png, gif & jpeg.
                        DESC
 
-  s.homepage         = 'https://github.com/Mark/ImgDimensions'
+  s.homepage         = 'https://github.com/tridiak/ImgDimensions'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Mark' => 'tridiaknz@gmail.com' }
-  s.source           = { :git => 'https://github.com/Mark/ImgDimensions.git', :tag => s.version.to_s }
+  s.author           = { 'Mark Noble' => 'tridiaknz@gmail.com' }
+  s.source           = { :git => 'https://github.com/tridiak/ImgDimensions.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'ImgDimensions/Classes/**/*'
+  s.source_files = 'ImgDimensions/Classes/**/*','ImgDimensions/Private/**/*'
+  s.private_header_files = 'ImgDimensions/Private/*.{h,hpp}'
+  
+  s.swift_version = '5.0'
   
   # s.resource_bundles = {
   #   'ImgDimensions' => ['ImgDimensions/Assets/*.png']

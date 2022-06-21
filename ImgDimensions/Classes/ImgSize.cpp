@@ -5,7 +5,7 @@
 //  Created by tridiak on 21/04/22.
 //
 
-#include "ImgSize.hpp"
+#include "../Private/ImgSize.hpp"
 
 #include <vector>
 #include <sys/stat.h>
@@ -97,7 +97,7 @@ std::vector<ImgSize> JpgImageSize(const char* file) {
 	
 	std::vector<ImgSize> sizes; sizes.clear();
 	
-	size_t size = info.st_size;
+	uint64_t size = info.st_size;
 	if (size < 6) {
 		throw std::invalid_argument("Not a (valid) jpeg file");
 	}

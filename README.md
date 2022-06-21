@@ -22,7 +22,7 @@ pod 'ImgDimensions'
 
 ## Author
 
-Mark, tridiaknz@gmail.com
+Mark Noble, tridiaknz@gmail.com
 
 ## License
 

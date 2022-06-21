@@ -49,7 +49,7 @@
 		93C2C82FC952B268954ACA61 /* Pods-ImgDimensions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgDimensions_Example.debug.xcconfig"; path = "Target Support Files/Pods-ImgDimensions_Example/Pods-ImgDimensions_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A010599B7C1E8BDDB9062D81 /* Pods-ImgDimensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgDimensions_Tests.release.xcconfig"; path = "Target Support Files/Pods-ImgDimensions_Tests/Pods-ImgDimensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E163233E16C3D025A5CD6C96 /* Pods_ImgDimensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgDimensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F35EF0EB42C934F8C8AFEFF8 /* ImgDimensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ImgDimensions.podspec; path = ../ImgDimensions.podspec; sourceTree = "<group>"; };
+		F35EF0EB42C934F8C8AFEFF8 /* ImgDimensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ImgDimensions.podspec; path = ../ImgDimensions.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -32,6 +32,7 @@ class Tests: XCTestCase {
 		XCTAssertEqual(isl.first.w, 600)
 		XCTAssertEqual(isl.first.h, 171)
 		
+		XCTAssertEqual(GetImageSizeC("/Gobblygook.png", &isl), -1)
     }
 	
 	func testSwiftWrapper() {
@@ -46,6 +47,8 @@ class Tests: XCTestCase {
 				XCTAssertEqual(sis.sizes[0].h, 171)
 			}
 		}
+		
+		XCTAssertNil(GetImageSize(for: "/Gobblygook.png"))
 	}
     
     func testPerformanceExample() {

@@ -61,8 +61,13 @@ int FileType(const char* file) {
 
 extern "C" int GetImageSizeC(const char* file, ImgSizeList* islPtr) {
 	if (!file) { return -1; }
-	
-	int res = FileType(file);
+	int res = 0;
+	try {
+		res = FileType(file);
+	}
+	catch (...) {
+		return -1;
+	}
 	if (res < 0) { return -1; }
 	if (!islPtr) { return res; }
 	
@@ -260,7 +265,7 @@ ImgSize PngImageSize(const char* file) {
 	uint32_t h = 0;
 	size_t pos = 8;
 	size_t chunkID = 0;
-	bool ihdrFound = false;
+	//bool ihdrFound = false;
 	try {
 		ins.read((char*)buffer, 8);
 		if (memcmp(buffer, pngMagic, 8) != 0) {
@@ -282,7 +287,7 @@ ImgSize PngImageSize(const char* file) {
 				throw std::invalid_argument("Not a valid png file");
 			}
 		}
-		std::streamsize ct = ins.gcount();
+		//std::streamsize ct = ins.gcount();
 		ins.close();
 		
 		//----------

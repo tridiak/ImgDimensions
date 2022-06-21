@@ -9,12 +9,12 @@ public enum ImgSizeType : Int {
 }
 
 public struct SImgSize {
-	let imgType : ImgSizeType
-	var sizes : [(w : UInt32, h: UInt32)]
+	public let imgType : ImgSizeType
+	public var sizes : [(w : UInt32, h: UInt32)]
 }
 
 public func GetImageSize(for imgFile: String) -> SImgSize? {
-	var isl : ImgSizeList! = nil
+	var isl : ImgSizeList! = ImgSizeList()
 	let res = GetImageSizeC(imgFile, &isl)
 	
 	if res < 0 { return nil }

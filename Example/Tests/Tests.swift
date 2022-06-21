@@ -19,8 +19,8 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
+    func testGetImagSizeC() {
+        // Direct C interface check
         
 		XCTAssertNotNil(imgPath)
 		
@@ -33,6 +33,20 @@ class Tests: XCTestCase {
 		XCTAssertEqual(isl.first.h, 171)
 		
     }
+	
+	func testSwiftWrapper() {
+		let imgSizeStruct : SImgSize? = GetImageSize(for: imgPath)
+		
+		XCTAssertNotNil(imgSizeStruct)
+		if let sis = imgSizeStruct {
+			XCTAssertEqual(sis.imgType, ImgSizeType.gif)
+			XCTAssert(sis.sizes.count > 0)
+			if sis.sizes.count > 0 {
+				XCTAssertEqual(sis.sizes[0].w, 600)
+				XCTAssertEqual(sis.sizes[0].h, 171)
+			}
+		}
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

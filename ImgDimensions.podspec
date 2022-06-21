@@ -32,7 +32,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   s.source_files = 'ImgDimensions/Classes/**/*','ImgDimensions/Private/**/*'
-  s.private_header_files = 'ImgDimensions/Private/*.{h,hpp}'
+  s.private_header_files = 'ImgDimensions/Private/*.{h,hpp}', 'ImgDimensions/Classes/*.hpp'
+	
+	s.pod_target_xcconfig = {
+		'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+	}
+	s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   s.swift_version = '5.0'
   
